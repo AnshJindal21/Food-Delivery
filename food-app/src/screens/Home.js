@@ -10,8 +10,13 @@ export default function Home() {
     /*container class means mobile ke lie pehle*/
     <div>
       <div><Navbar /></div>
-      <div><Corousel/></div>
-      <div><Card/></div>
+      <div id="div-corousel"><Corousel/></div>
+      <div className="m-3"><Card/></div>
+      <div className="m-3"><Card/></div>
+      <div className="m-3"><Card/></div>
+      <div className="m-3"><Card/></div>
+      <div className="m-3"><Card/></div>
+
       <div><Footer /></div>
     </div>
   );
