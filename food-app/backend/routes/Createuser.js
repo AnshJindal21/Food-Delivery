@@ -1,8 +1,13 @@
 const express=require("express")
 const router=express.Router()
 const User=require("../models/User")
+const {body,validationResult}=require("express-validator")
 /*await lagana is very zaruri*/
-router.post("/createuser",async(req,res)=>{
+router.post("/createuser",[body('email','Invalid Email').isEmail(),body('name').isLength({min:5}),body('password','Invalid Password').isLength({min:5})],async(req,res)=>{
+    const errors=validationResult(req);
+    if(!errors.isEmpty()){
+        return res.status(400).json({errors:errors.array()})
+    }
     try {
         await User.create({
             name:req.body.name,
