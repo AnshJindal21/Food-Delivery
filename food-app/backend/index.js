@@ -18,6 +18,8 @@ app.get('/', (req, res) => {
 app.use(express.json());
 /*above is very imp*/
 app.use('/api',require("./routes/Createuser"))
+app.use('/api',require("./routes/DisplayData"))
+
 /*endpoint will be localhost:5000/api/createuser*/
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

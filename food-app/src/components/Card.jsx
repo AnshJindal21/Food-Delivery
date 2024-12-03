@@ -1,13 +1,14 @@
 import React from 'react'
-import chicken from "../images/chicken-tikka.jpg"
-export default function Card() {
+export default function Card(props) {
+  let options=props.options;
+  let priceOptions=Object.keys(options);
   return (
       <div className="card mt-3" style={{"width": "18rem","maxHeight":"360px"}}>
-        <img src={chicken} className="card-img-top" alt="..." />
+        <img src={props.imgSrc} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title 
+          <h5 className="card-title">{props.foodName}</h5>
+          <p className="card-text" style={{"font-size":"13px"}}>
+            {props.desc} 
           </p>
           <div className="container w-100">
             {/* for quantity*/}
@@ -22,8 +23,9 @@ export default function Card() {
             </select>
             {/* for size*/}
             <select className="m-2 h-100 bg-success rounded">
-            <option value="half">Half</option>
-            <option value="full">Full</option>
+            {priceOptions.map((data)=>{
+              return <option key={data} value={data}>{data}</option>
+            })}
 
             </select>
             <div className="d-inline fs-5">Total Price</div>
