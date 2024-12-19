@@ -84,11 +84,9 @@ export default function Home() {
                         //when normal container means mobile waala col 12 alotted hai when medium 6 alotted etc.
                         //12 col means 12 col lega wo 6 means ek card 6 lega fir doosra uske side waale 6 lelega u have to keep it divisor of 12
                         <div key={filterItems._id} className="col-12 col-md-6 col-lg-3" >
-                          <Card 
-                          foodName={filterItems.name}
+                          <Card foodItem={filterItems}
                           options={filterItems.options[0]}
-                          imgSrc={filterItems.img}
-                          desc={filterItems.description}
+
                           />
                         </div>
                       );
