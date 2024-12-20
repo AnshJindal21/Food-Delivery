@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.use(express.json());
 /*above is very imp*/
 app.use('/api',require("./routes/Createuser"))
-app.use('/api',require("./routes/orderData"))
+app.use('/api',require("./routes/OrderData"))
 app.use('/api',require("./routes/DisplayData"))
 
 /*endpoint will be localhost:5000/api/createuser*/
