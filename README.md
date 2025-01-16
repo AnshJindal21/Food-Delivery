@@ -18,7 +18,12 @@ This project is a full-stack food delivery website built using the MERN stack. I
 ### 🛠 Prerequisites  
 Make sure you have the following installed:  
 - Node.js (v14 or higher)  
-- MongoDB  
+- MongoDB
+
+### 🛠 Make sure you have a .env file
+JWT_SECRET=your_secret_key
+MONGO_URI=your_mongo_db_connection_string
+
 
 ### 📥 Installation  
 1. Clone the repository:  
