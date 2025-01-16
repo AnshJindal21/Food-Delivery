@@ -21,8 +21,8 @@ Make sure you have the following installed:
 - MongoDB
 
 ### 🛠 Make sure you have a .env file
-JWT_SECRET=your_secret_key
-MONGO_URI=your_mongo_db_connection_string
+- JWT_SECRET=your_secret_key
+- MONGO_URI=your_mongo_db_connection_string
 
 
 ### 📥 Installation  
